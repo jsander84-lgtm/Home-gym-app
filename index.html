@@ -1,0 +1,184 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="theme-color" content="#111827"><title>Home Gym Training</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f3f4f6;color:#111827;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}header{position:sticky;top:0;z-index:9;background:#111827;color:white;padding:16px}header h1{font-size:20px;margin:0}header small{color:#cbd5e1}.wrap{max-width:820px;margin:auto;padding:12px 12px 80px}.next{background:#dcfce7;border:1px solid #86efac;border-radius:16px;padding:14px;margin-bottom:12px}.next b{font-size:18px}.tabs{display:flex;gap:7px;overflow:auto;padding-bottom:12px}.tab{white-space:nowrap;border:1px solid #d1d5db;background:#fff;border-radius:999px;padding:9px 12px;font-weight:700}.tab.on{background:#111827;color:#fff}.block,.card{background:white;border:1px solid #e5e7eb;border-radius:16px;padding:14px;margin-bottom:10px}.block h2,.card h2{margin:0 0 8px;font-size:17px}.routine{display:grid;gap:6px}.routine div{padding:8px;background:#f9fafb;border-radius:9px;font-size:13px}.routine .rrow{display:flex;align-items:center;gap:10px}.routine .rrow img{width:74px;height:58px;object-fit:cover;border-radius:9px;border:1px solid #d1d5db;flex:none}.head{display:flex;gap:10px;align-items:center}.pic{width:72px;height:72px;flex:none;border:1px solid #d1d5db;border-radius:12px;background:#f9fafb;display:grid;place-items:center;cursor:pointer;overflow:hidden}.pic img{width:100%;height:100%;object-fit:cover}.pic svg{width:48px;height:48px}.meta{flex:1}.meta h2{margin:0 0 3px}.muscle{font-size:12px;color:#6b7280}.last{margin:10px 0;background:#eff6ff;border-radius:10px;padding:9px;font-size:13px}.last strong{display:block;color:#1e3a8a;margin-bottom:3px}.goal{font-size:13px;font-weight:700;color:#166534;margin-bottom:9px}.sets{display:grid;grid-template-columns:1.1fr repeat(3,1fr);gap:6px}.field label{display:block;font-size:10px;color:#6b7280;margin-bottom:3px}.field input{width:100%;padding:10px 4px;border:1px solid #d1d5db;border-radius:8px;text-align:center;font-size:16px}.actions{display:flex;gap:7px;margin-top:9px}.actions button{border:0;border-radius:9px;padding:10px;font-weight:700;flex:1}.save{background:#111827;color:white}.info{background:#eef2ff;color:#3730a3}.tip{display:none;margin-top:9px;background:#f9fafb;padding:10px;border-radius:9px;font-size:13px;line-height:1.45}.tip.show{display:block}.modal{display:none;position:fixed;inset:0;background:#000b;z-index:20;padding:20px;align-items:center;justify-content:center}.modal.show{display:flex}.modalbox{background:white;border-radius:18px;padding:18px;max-width:420px;width:100%;text-align:center}.modalbox{max-height:92vh;overflow:auto}.modalbox img{width:100%;max-height:52vh;object-fit:contain;border-radius:12px;background:#f3f4f6}.modalbox svg{width:180px;height:180px}.modalbox button{margin-top:12px;border:0;background:#111827;color:#fff;padding:10px 18px;border-radius:9px}.circuit{background:#fff7ed;border:1px solid #fdba74;border-radius:16px;padding:14px;margin-bottom:10px}.circuit h2{margin:0 0 8px}.circuit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.circuit input{width:100%;padding:10px;border:1px solid #d1d5db;border-radius:8px;font-size:16px}.circuit button{width:100%;margin-top:10px;border:0;border-radius:9px;padding:11px;font-weight:700;background:#111827;color:#fff}.footer{position:fixed;bottom:0;left:0;right:0;background:#fffd;border-top:1px solid #ddd;padding:9px;text-align:center;font-size:11px;color:#6b7280}@media(max-width:520px){.sets{grid-template-columns:1.1fr repeat(3,1fr)}.pic{width:52px;height:52px}.field input{font-size:15px}}
+
+button,.pic,input{touch-action:manipulation}button{min-height:44px}.tabs{-webkit-overflow-scrolling:touch;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
+@media(max-width:640px){header{padding:12px 14px}header h1{font-size:18px}.wrap{padding:10px 10px 88px}.block,.card,.circuit{border-radius:14px;padding:12px}.head{align-items:flex-start}.pic{width:84px;height:84px}.meta h2{font-size:16px}.sets{grid-template-columns:1fr 1fr;gap:8px}.field input{font-size:16px;min-height:46px}.routine .rrow{align-items:center}.routine .rrow img{width:92px;height:72px}.actions button{min-height:46px}.modal{padding:10px}.modalbox{padding:14px;border-radius:14px}.modalbox img{max-height:58vh}.footer{font-size:10px;padding:8px}.circuit-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:380px){.pic{width:72px;height:72px}.routine .rrow img{width:82px;height:66px}.sets{grid-template-columns:1fr 1fr}.tab{padding:9px 11px}}
+
+.timerbox{margin-top:9px;padding:10px;background:#fef3c7;border:1px solid #fde68a;border-radius:10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}.timerbox .clock{font-size:22px;font-weight:800;min-width:68px}.timerbox .restlabel{font-size:12px;color:#78350f;flex:1;min-width:130px}.timerbox button{border:0;border-radius:8px;padding:9px 11px;font-weight:700;background:#92400e;color:#fff}.timerbox button.secondary{background:#fff;color:#92400e;border:1px solid #f59e0b}
+
+.completeDay{width:100%;border:0;border-radius:12px;padding:14px;background:#166534;color:#fff;font-weight:800;font-size:16px;margin:4px 0 12px}.historyBtn{background:#eef2ff!important;color:#3730a3!important}.progress{margin-top:10px;background:#f8fafc;border-radius:10px;padding:8px}.progress canvas{width:100%;height:130px}.cycleNote{background:#fff7ed;border:1px solid #fdba74;border-radius:12px;padding:10px;margin-bottom:12px;font-size:13px}.muted{font-size:12px;color:#64748b}.historyList{text-align:left;font-size:13px}.historyList div{padding:8px 0;border-bottom:1px solid #e5e7eb}
+
+/* Finale mobile Navigation */
+@media(max-width:640px){
+  .tabs{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:7px;
+    overflow:visible;
+    padding-bottom:12px;
+  }
+  .tab{
+    width:100%;
+    min-width:0;
+    white-space:normal;
+    line-height:1.15;
+    padding:9px 5px;
+    font-size:13px;
+  }
+}
+@media(max-width:390px){
+  .tabs{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+</style></head><body><header><h1>🏋️ Home Gym Training</h1><small>Übungshistorie über alle Trainingstage</small></header><main class="wrap"><div class="next"><span>Nächste Einheit laut Reihenfolge</span><br><b id="nextDay">Push</b><div style="font-size:12px;margin-top:4px">Die Reihenfolge wird nach abgeschlossenen Trainingseinheiten automatisch fortgeführt.</div></div><div class="tabs" id="tabs"></div><div id="content"></div></main><div class="modal" id="modal" onclick="closeModal()"><div class="modalbox" onclick="event.stopPropagation()"><div id="bigpic"></div><h2 id="pictitle"></h2><p id="pictext"></p><button onclick="closeModal()">Schließen</button></div></div><div class="footer">Speicherung lokal im Browser dieses Geräts · Werte einer Übung gelten tagübergreifend · Bild antippen = große Ansicht + Ausführungshinweise</div><!-- Home Gym Final V1 -->
+<script>
+const order=['Push','Pull','Beine','Oberkörper','Ganzkörper','Götter-Workout'];
+const plans={
+'Push':[
+['Smith-Bankdrücken','Brust · Trizeps','3×6–10 · RIR 1–2','Schulterblätter nach hinten/unten. Füße fest. Stange kontrolliert zur Brust und ohne Schulterhochziehen drücken.','bench'],
+['Schrägbank-KH','obere Brust','3×8–12 · RIR 1–2','Bank moderat schräg. Hanteln kontrolliert ablassen und über der Brust zusammenführen.','incline'],
+['Stehende Kabel-Brustpresse','Brust','2×10–15 · RIR 1','Beide Kabel etwa auf Brusthöhe. Versetzter Stand, Rumpf fest, Griffe kontrolliert nach vorn drücken.','cablepress'],
+['Schulterdrücken','Schulter · Trizeps','3×8–12 · RIR 1–2','Rumpf fest, Ellenbogen leicht vor dem Körper, kein starkes Hohlkreuz.','shoulder'],
+['Lean-away Seitheben KH','seitliche Schulter','2×12–15 · RIR 1','Ersatz fürs bisherige Seitheben. Leicht vom Haltepunkt wegneigen, ohne Schwung heben.','lateral'],
+['Trizeps Overhead','Trizeps','2×10–15 · RIR 1','Oberarme möglichst ruhig, Ellenbogen beugen und vollständig strecken.','triceps']],
+'Pull':[
+['Latzug','Lat · Bizeps','3×8–12 · RIR 1–2','Ersatz für Klimmzüge. Brust hoch, Ellbogen Richtung Hüfte ziehen.','lat'],
+['Kabelrudern','mittlerer Rücken','3×8–12 · RIR 1–2','Rumpf ruhig, Griff zum Bauch ziehen, Schulterblätter kontrolliert zusammenführen.','row'],
+['Chest-supported Row','oberer Rücken','3×8–12 · RIR 1–2','Ersatz für KH-Rudern. Brust auf der Auflage lassen und ohne Schwung ziehen.','row'],
+['Reverse Fly','hintere Schulter','2×12–15 · RIR 1','Schultern tief halten, Arme kontrolliert nach außen führen.','fly'],
+['Preacher Curls am Curlpult','Bizeps','2×10–15 · RIR 1','R733PC-Curlpult nutzen. Oberarme vollständig auflegen, kontrolliert curlen und unten nicht federn.','preacher'],
+['Hammer-Curls','Bizeps · Brachialis','2×10–15 · RIR 1','Neutraler Griff, Ellenbogen nah am Körper.','curl']],
+'Beine':[
+['Goblet Squat','Quadrizeps · Gesäß','3×8–12 · RIR 1–2','Ersatz für Smith-Kniebeugen ohne Zusatzmodul. Kurzhantel vor der Brust, Knie folgen den Fußspitzen.','goblet'],
+['Rumänisches Kreuzheben','Beinbeuger · Gesäß','3×8–12 · RIR 1–2','Hüfte nach hinten, Rücken neutral, Gewicht nah am Körper.','hinge'],
+['Bulgarian Split Squat','Beine · Gesäß','2×8–12 · RIR 1–2','Vorderer Fuß stabil, Knie in Fußrichtung, kontrolliert absenken.','split'],
+['Cable Pull-Through','Gesäß · Beinbeuger','2×12–15 · RIR 1','Seilgriff tief einhängen, Rücken zum Kabelzug. Hüfte weit nach hinten und aus dem Gesäß wieder strecken.','pullthrough'],
+['Wadenheben','Waden','3×10–15 · RIR 1','Unten bewusst dehnen, oben kurz anspannen, nicht federn.','calf'],
+['Cable Crunch','Core','2×10–15 · RIR 1–2','Rippen Richtung Becken einrollen; nicht nur aus der Hüfte ziehen.','core']],
+'Oberkörper':[
+['Smith-Bankdrücken','Brust · Trizeps','3×6–10 · RIR 1–2','Gleiche Historie wie am Push-Tag.','bench'],['Latzug','Lat','3×8–12 · RIR 1–2','Gleiche Historie wie am Pull-Tag.','lat'],['Kabelrudern','Rücken','3×8–12 · RIR 1–2','Gleiche Historie wie am Pull-Tag.','row'],['Schrägbank-KH','obere Brust','2×8–12 · RIR 1–2','Gleiche Historie wie am Push-Tag.','incline'],['Lean-away Seitheben KH','seitliche Schulter','2×12–15 · RIR 1','Ohne Schwung.','lateral'],['Preacher Curls + Trizeps Overhead','Arme','2×10–15 · RIR 1','Supersatz am Curlpult und Kabelzug; Technik vor Gewicht.','preacher']],
+'Ganzkörper':[
+['Goblet Squat','Beine','3×8–12 · RIR 1–2','Historie mit Beintag geteilt.','goblet'],['Schrägbank-KH','Brust','3×8–12 · RIR 1–2','Historie mit Push/Oberkörper geteilt.','incline'],['Latzug','Lat','3×8–12 · RIR 1–2','Historie mit Pull/Oberkörper geteilt.','lat'],['Rumänisches Kreuzheben','hintere Kette','2×8–12 · RIR 1–2','Historie mit Beintag geteilt.','hinge'],['Reverse Fly','hintere Schulter','2×12–15 · RIR 1','Kontrolliert, ohne Schwung.','fly'],['Wadenheben','Waden','2×10–15 · RIR 1','Volle Bewegungsamplitude.','calf'],['Cable Crunch','Core','2×10–15 · RIR 1–2','Kontrolliert einrollen.','core']],
+'Götter-Workout':[
+['Burpees','Ganzkörper · Kondition','10 Wdh.','Aus dem Stand in die Stützposition, Brust kontrolliert Richtung Boden, Füße wieder nach vorn und explosiv aufrichten.','burpee'],
+['Liegestütze','Brust · Trizeps · Core','15 Wdh.','Körper bildet eine Linie. Brust kontrolliert absenken, Ellenbogen etwa 30–45° zum Körper.','pushup'],
+['Air Squats','Quadrizeps · Gesäß','25 Wdh.','Füße stabil, Knie folgen den Fußspitzen, Hüfte kontrolliert nach hinten und unten.','airsquat'],
+['Mountain Climbers','Core · Schulter · Kondition','30 gesamt','Stabile Stützposition. Knie abwechselnd zügig Richtung Brust führen, Becken möglichst ruhig.','mountain'],
+['Ausfallschritte','Beine · Gesäß','20 gesamt','Aufrecht bleiben, langen kontrollierten Schritt setzen und vorderes Knie in Fußrichtung führen.','lunge'],
+['Sit-ups','Bauch','20 Wdh.','Kontrolliert aufrollen, nicht am Nacken ziehen und langsam zurückgehen.','situp'],
+['Plank Shoulder Taps','Core · Schulter','20 gesamt','Breiter stabiler Stand. Abwechselnd gegenüberliegende Schulter berühren, Hüfte möglichst ruhig halten.','tap'],
+['Jump Squats','Beine · Kondition','15 Wdh.','Sauber in die Kniebeuge, explosiv abspringen und weich landen.','jumpsquat']]};
+const warmImg={"armcircle":"images/image_01_65f8922b8794.jpg","cheststretch":"images/image_02_6f1ce1e5a6b0.jpg","latstretch":"images/image_03_b45b2cba4a7e.jpg","hipstretch":"images/image_04_d9411ee894b2.jpg","hamstretch":"images/image_05_48fe09877774.jpg","jj": "images/image_06_5ee092c49b80.jpg", "arms": "images/image_07_1f0e92f10a0e.jpg", "squat": "images/image_08_b4429b83bb1c.jpg", "hinge": "images/image_09_7d06c7fa6142.png", "calf": "images/image_10_5328800bb7c3.jpg"};
+const bodyImages={"burpee": "images/image_11_649f40c5cc2d.png", "pushup": "images/image_12_1412b43a0047.jpg", "mountain": "images/image_13_6fe06f9f42f2.jpg", "lunge": "images/image_14_09750ad856a2.jpg", "situp": "images/image_15_e4b7e798fae3.jpg", "tap": "images/image_16_948127dfc9de.png", "jumpsquat": "images/image_17_8833dd0dfd65.png"};
+const exerciseImages={"lateral":"images/image_18_68ed9e6dd5db.jpg","cablepress":"images/image_19_30256243a960.jpg","bench": "images/image_20_025633017be5.jpg", "incline": "images/image_21_8dc05050cd67.jpg", "shoulder": "images/image_22_6a5d04ac840a.jpg", "lat": "images/image_23_5deb77ae1c97.jpg", "row": "images/image_24_e40f3c18d6b0.jpg", "fly": "images/image_25_6dff9dadf843.jpg", "goblet": "images/image_08_b4429b83bb1c.jpg", "hinge": "images/image_09_7d06c7fa6142.png", "split": "images/image_26_185c80ce269f.png", "pullthrough": "images/image_27_95cf2c4e5663.jpg", "core": "images/image_28_7ff89620bf83.jpg", "plank": "images/image_29_f72d1a260f4b.jpg", "calf": "images/image_10_5328800bb7c3.jpg", "curl": "images/image_30_7d9373228769.png", "triceps": "images/image_31_67a616908929.jpg", "squat": "images/image_08_b4429b83bb1c.jpg"};
+const exerciseImageByName={'Smith-Bankdrücken':exerciseImages['bench'],'Schrägbank-KH':exerciseImages['incline'],'Schulterdrücken':exerciseImages['shoulder'],'Latzug':exerciseImages['lat'],'Kabelrudern':exerciseImages['row'],'Reverse Fly':exerciseImages['fly'],'Goblet Squat':exerciseImages['goblet'],'Rumänisches Kreuzheben':exerciseImages['hinge'],'Bulgarian Split Squat':exerciseImages['split'],'Cable Pull-Through':exerciseImages['pullthrough'],'Cable Crunch':exerciseImages['core'],'Wadenheben':exerciseImages['calf'],'Hammer-Curls':exerciseImages['curl'],'Preacher Curls am Curlpult':exerciseImages['curl'],'Preacher Curls + Trizeps Overhead':exerciseImages['curl'],'Trizeps Overhead':exerciseImages['triceps'],'Ausfallschritte':exerciseImages['lunge']};
+const restSeconds={
+'Smith-Bankdrücken':150,'Schrägbank-KH':120,'Stehende Kabel-Brustpresse':90,'Schulterdrücken':120,'Lean-away Seitheben KH':60,'Trizeps Overhead':60,
+'Latzug':120,'Kabelrudern':120,'Chest-supported Row':120,'Reverse Fly':60,'Preacher Curls am Curlpult':75,'Hammer-Curls':60,
+'Goblet Squat':120,'Rumänisches Kreuzheben':150,'Bulgarian Split Squat':120,'Cable Pull-Through':90,'Wadenheben':60,'Cable Crunch':60,
+'Preacher Curls + Trizeps Overhead':75};
+let timers={};
+function fmtSec(x){return String(Math.floor(x/60)).padStart(2,'0')+':'+String(x%60).padStart(2,'0')}
+function timerHtml(n,i){let sec=restSeconds[n]||90;return `<div class="timerbox"><div class="clock" id="clock${i}">${fmtSec(sec)}</div><div class="restlabel"><b>Empfohlene Satzpause</b><br>${Math.floor(sec/60)}:${String(sec%60).padStart(2,'0')} Min.</div><button onclick="startRest(${i},${sec})">Pause starten</button><button class="secondary" onclick="resetRest(${i},${sec})">Reset</button></div>`}
+function startRest(i,sec){clearInterval(timers[i]);let left=sec;document.getElementById('clock'+i).textContent=fmtSec(left);timers[i]=setInterval(()=>{left--;let el=document.getElementById('clock'+i);if(el)el.textContent=fmtSec(Math.max(0,left));if(left<=0){clearInterval(timers[i]);if(navigator.vibrate)navigator.vibrate([200,100,200]);}},1000)}
+function resetRest(i,sec){clearInterval(timers[i]);let el=document.getElementById('clock'+i);if(el)el.textContent=fmtSec(sec)}
+function fallbackSvg(label){let safe=(label||'Übung').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect width="400" height="300" rx="20" fill="#f3f4f6"/><text x="200" y="130" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700" fill="#111827">${safe}</text><text x="200" y="170" text-anchor="middle" font-family="Arial" font-size="17" fill="#6b7280">Bild wird ersetzt</text></svg>`)}`}
+function imgFor(name,type){if(type==='airsquat')type='squat';return exerciseImageByName[name]||bodyImages[type]||exerciseImages[type]||warmImg[type]||fallbackSvg(name)}
+function thumb(name,type){let u=imgFor(name,type),fb=fallbackSvg(name);return `<img src="${u}" alt="${name} – Übungsausführung" loading="lazy" onerror="this.onerror=null;this.src='${fb}'">`}
+function icon(type){const body=`<circle cx="25" cy="13" r="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M25 18v13M25 23l-9 8M25 23l9 8M25 31l-8 12M25 31l8 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`;let eq='';if(['bench','incline','press'].includes(type))eq='<path d="M5 35h40M10 35v8M40 35v8M8 22h34" stroke="currentColor" stroke-width="2"/>';if(['row','lat'].includes(type))eq='<path d="M43 5v40M37 8h6M38 8v17" stroke="currentColor" stroke-width="2"/>';if(['squat','split','hinge','legcurl','calf'].includes(type))eq='<path d="M8 42h34M12 28h26" stroke="currentColor" stroke-width="2"/>';if(['lateral','shoulder','fly'].includes(type))eq='<path d="M8 23h34" stroke="currentColor" stroke-width="2"/>';if(['curl','triceps'].includes(type))eq='<circle cx="10" cy="30" r="3"/><circle cx="40" cy="30" r="3"/>';return `<svg viewBox="0 0 50 50" aria-hidden="true">${eq}${body}</svg>`}
+function latest(n){let a=hist[n]||[];return a.length?a[a.length-1]:legacy[n]||null}function lastText(n){let x=latest(n);if(!x)return 'Für diese neue Übung gibt es noch keinen gespeicherten Vorwert.';return `${x.kg||'–'} kg · Satz 1: ${x.r?.[0]||'–'} · Satz 2: ${x.r?.[1]||'–'} · Satz 3: ${x.r?.[2]||'–'}${x.src?' · '+x.src:''}`}
+function goal(n){let x=latest(n);if(!x)return 'Heute: sauberen Startwert ermitteln und speichern.';return `Heute: zuerst ${x.kg} kg ansetzen und versuchen, die letzte Gesamtleistung sauber zu bestätigen oder leicht zu übertreffen.`}
+function routine(title,arr){return `<section class="block"><h2>${title}</h2><div class="routine">${arr.map((x,i)=>{let t=Array.isArray(x)?x[0]:x,k=Array.isArray(x)?x[1]:null,u=warmImg[k]||bodyImages[k]||exerciseImages[k]||null;let fb=fallbackSvg(t);return `<div class="rrow"><img src="${u||fb}" alt="${t}" loading="lazy" style="cursor:pointer" onclick="showRoutinePic(${JSON.stringify(t)},${JSON.stringify(k)})" onerror="this.onerror=null;this.src='${fb}'"><span><b>${i+1}.</b> ${t}</span></div>`}).join('')}</div></section>`}
+function showRoutinePic(title,type){let u=warmImg[type]||bodyImages[type]||exerciseImages[type]||fallbackSvg(title);document.getElementById('bigpic').innerHTML=`<img src="${u}" alt="${title}" onerror="this.onerror=null;this.src='${fallbackSvg(title)}'">`;document.getElementById('pictitle').textContent=title;document.getElementById('pictext').textContent='';document.getElementById('modal').classList.add('show')}
+
+// --- Version 2: runtime initialization ---
+let day = localStorage.getItem('gym_day_v8') || 'Push';
+let hist = JSON.parse(localStorage.getItem('gym_hist_v8') || '{}');
+let completions = JSON.parse(localStorage.getItem('gym_day_completions') || '{}');
+const legacy = {};
+
+const warmBase = [
+  ['Hampelmann · 60 Sek.','jj'],
+  ['Armkreisen · 10 vor / 10 zurück','armcircle'],
+  ['Schulterblatt aktivieren · 10–15 Wdh.','shoulder'],
+  ['Kniebeugen ohne Gewicht · 15 Wdh.','squat']
+];
+const warmGods = [
+  ['Hampelmann · 90 Sek.','jj'],
+  ['Armkreisen · 10 vor / 10 zurück','armcircle'],
+  ['Kniebeugen ohne Gewicht · 15 Wdh.','squat'],
+  ['Leichte Burpees · 5 Wdh.','burpee']
+];
+const stretchBase = [
+  ['Brust / Schulter · 30 Sek. je Seite','cheststretch'],
+  ['Lat / Rücken · 30 Sek. je Seite','latstretch'],
+  ['Hüftbeuger · 30 Sek. je Seite','hipstretch'],
+  ['Oberschenkelrückseite · 30 Sek. je Seite','hamstretch']
+];
+const warm = Object.fromEntries(order.map(d => [d, d === 'Götter-Workout' ? warmGods : warmBase]));
+const stretch = Object.fromEntries(order.map(d => [d, stretchBase]));
+// --- Ende Version-2-Patch ---
+
+function render(){document.getElementById('tabs').innerHTML=order.map(x=>`<button class="tab ${x===day?'on':''}" onclick="setDay('${x}')">${x}</button>`).join('');let cards=plans[day].map((e,i)=>day==='Götter-Workout'?circuitCard(e,i):card(e,i)).join('');let tracker=day==='Götter-Workout'?circuitTracker():'';document.getElementById('content').innerHTML=`<section class="block"><b>✓ Auf dein Homegym abgestimmt</b><div style="font-size:13px;margin-top:6px">SQMIZE SQ-S955-90 · R733 XT · R733PC Curlpult · Lang-/Kurzhanteln · Kabelzuggriffe. Keine Übung setzt Beinpresse-, Leg-Curl- oder andere nicht genannte Zusatzmodule voraus.</div></section>`+`<div class="cycleNote"><b>Durchläufe ${day}:</b> ${completions[day]||0}${(completions[day]||0)>=4?' · 🔁 4 Durchläufe erreicht – beim nächsten Block 1–2 Übungen wechseln, Kernübungen behalten.':''}</div>`+routine('🔥 Aufwärmen',warm[day])+tracker+cards+routine('🧘 Dehnen / Cool-down',stretch[day])+`<button class="completeDay" onclick="completeDay()">✓ Training ${day} abschließen</button>`;}
+function circuitTracker(){let h=JSON.parse(localStorage.getItem('gym_gods_v6')||'[]'),last=h.length?h[h.length-1]:null;return `<section class="circuit"><h2>⚡ Götter-Workout · Zirkel</h2><p style="font-size:13px;margin:0 0 10px">3 Runden. Übungen nacheinander, möglichst 10–20 Sek. Wechselpause; 60–90 Sek. zwischen den Runden.</p>${last?`<div class="last"><strong>Letztes Götter-Workout</strong>${last.rounds} Runden · ${last.time}</div>`:''}<div class="circuit-grid"><div class="field"><label>Runden</label><input id="gRounds" inputmode="numeric" value="3"></div><div class="field"><label>Gesamtzeit (mm:ss)</label><input id="gTime" placeholder="z. B. 18:42"></div></div><button onclick="saveGods()">Götter-Workout speichern</button></section>`}
+function saveGods(){let rounds=document.getElementById('gRounds').value,time=document.getElementById('gTime').value;if(!rounds||!time)return alert('Bitte Runden und Gesamtzeit eintragen.');let h=JSON.parse(localStorage.getItem('gym_gods_v6')||'[]');h.push({date:new Date().toISOString(),rounds,time});localStorage.setItem('gym_gods_v6',JSON.stringify(h));alert('Götter-Workout gespeichert.');render()}
+function circuitCard(e,i){let[n,m,scheme,tip,type]=e;return `<section class="card"><div class="head"><div class="pic" onclick="showPic(${i})">${thumb(n,type)}</div><div class="meta"><h2>${i+1}. ${n}</h2><div class="muscle">${m} · <b>${scheme}</b></div></div></div><div style="font-size:12px;color:#6b7280;margin-top:8px">Bild antippen für große Ansicht und Ausführungshinweise.</div></section>`}
+function card(e,i){let[n,m,scheme,tip,type]=e,x=latest(n);return `<section class="card"><div class="head"><div class="pic" onclick="showPic(${i})">${thumb(n,type)}</div><div class="meta"><h2>${n}</h2><div class="muscle">${m} · ${scheme}</div></div></div><div class="last"><strong>Was hatte ich beim letzten Mal?</strong>${lastText(n)}</div><div class="goal">${goal(n)}</div><div class="sets"><div class="field"><label>Gewicht kg</label><input id="kg${i}" inputmode="decimal" value="${x?.kg||''}"></div>${[0,1,2].map(q=>`<div class="field"><label>Wdh. S${q+1}</label><input id="r${i}${q}" inputmode="numeric" value=""></div>`).join('')}</div>${timerHtml(n,i)}<div class="actions"><button class="save" onclick="save(${i})">Speichern</button><button class="historyBtn" onclick="showHistory(${i})">Verlauf</button></div><div class="tip" id="tip${i}">${tip}</div></section>`}
+function setDay(x){day=x;localStorage.setItem('gym_day_v8',x);render()}function tip(i){document.getElementById('tip'+i).classList.toggle('show')}
+function save(i){let n=plans[day][i][0],kg=document.getElementById('kg'+i).value,r=[0,1,2].map(q=>document.getElementById(`r${i}${q}`).value);if(!kg&&!r.some(Boolean))return alert('Bitte Werte eintragen.');(hist[n]??=[]).push({date:new Date().toISOString(),day,kg,r});localStorage.setItem('gym_hist_v8',JSON.stringify(hist));alert('Gespeichert: '+n);render()}
+function completeDay(){completions[day]=(completions[day]||0)+1;localStorage.setItem('gym_day_completions',JSON.stringify(completions));let idx=order.indexOf(day);let next=order[(idx+1)%order.length];localStorage.setItem('gym_day_v8',next);document.getElementById('nextDay').textContent=next;alert('Training abgeschlossen. Nächste Einheit: '+next);render()}
+function showHistory(i){let n=plans[day][i][0],a=hist[n]||[],base=legacy[n]? [legacy[n]]:[],all=base.concat(a);document.getElementById('pictitle').textContent=n+' · Verlauf';if(!all.length){document.getElementById('bigpic').innerHTML='<div class="muted">Noch keine gespeicherten Werte.</div>';document.getElementById('pictext').textContent='';document.getElementById('modal').classList.add('show');return;}let rows=all.slice().reverse().map(x=>`<div><b>${x.date?new Date(x.date).toLocaleDateString('de-DE'):'Ausgangswert'}</b> · ${x.kg||'–'} kg · S1 ${x.r?.[0]||'–'} · S2 ${x.r?.[1]||'–'} · S3 ${x.r?.[2]||'–'}${x.day?' · '+x.day:''}</div>`).join('');document.getElementById('bigpic').innerHTML='<canvas id="chart" width="360" height="140"></canvas><div class="historyList">'+rows+'</div>';document.getElementById('pictext').textContent='';document.getElementById('modal').classList.add('show');setTimeout(()=>drawChart(all),0)}
+function drawChart(all){let c=document.getElementById('chart');if(!c)return;let ctx=c.getContext('2d'),vals=all.map(x=>parseFloat(String(x.kg).replace(',','.'))).filter(Number.isFinite);if(vals.length<1)return;let w=c.width,h=c.height,p=24,min=Math.min(...vals),max=Math.max(...vals);if(max===min){max+=1;min-=1}ctx.clearRect(0,0,w,h);ctx.strokeStyle='#cbd5e1';ctx.beginPath();ctx.moveTo(p,h-p);ctx.lineTo(w-p,h-p);ctx.stroke();ctx.strokeStyle='#0f172a';ctx.lineWidth=3;ctx.beginPath();vals.forEach((v,j)=>{let x=p+(w-2*p)*(vals.length===1?.5:j/(vals.length-1)),y=h-p-(h-2*p)*(v-min)/(max-min);j?ctx.lineTo(x,y):ctx.moveTo(x,y)});ctx.stroke();ctx.fillStyle='#0f172a';ctx.font='12px sans-serif';ctx.fillText(max+' kg',2,14);ctx.fillText(min+' kg',2,h-4)}
+function showPic(i){let e=plans[day][i],u=imgFor(e[0],e[4]);document.getElementById('bigpic').innerHTML=u?`<img src="${u}" alt="${e[0]} – Ausführung" onerror="this.onerror=null;this.src='${fallbackSvg(e[0])}'">`:icon(e[4]);document.getElementById('pictitle').textContent=e[0];document.getElementById('pictext').textContent=e[3];document.getElementById('modal').classList.add('show')}function closeModal(){document.getElementById('modal').classList.remove('show')}let lastCompleted=localStorage.getItem('gym_day_v8')||'Push';document.getElementById('nextDay').textContent=lastCompleted;render();
+
+function gymStorageKeys(){
+  const keys=[];
+  for(let i=0;i<localStorage.length;i++){
+    const k=localStorage.key(i);
+    if(k && (k.startsWith('gym_') || k.startsWith('hist_') || k.startsWith('exercise_'))) keys.push(k);
+  }
+  return keys.sort();
+}
+function exportGymBackup(){
+  try{
+    const data={format:'home-gym-backup',version:1,createdAt:new Date().toISOString(),storage:{}};
+    gymStorageKeys().forEach(k=>data.storage[k]=localStorage.getItem(k));
+    const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download='Home_Gym_Backup_'+new Date().toISOString().slice(0,10)+'.json';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+    const el=document.getElementById('backupStatus');
+    if(el) el.textContent='Backup erstellt.';
+  }catch(e){
+    const el=document.getElementById('backupStatus');
+    if(el) el.textContent='Backup konnte nicht erstellt werden.';
+  }
+}
+function importGymBackup(file){
+  if(!file) return;
+  const r=new FileReader();
+  r.onload=()=>{
+    try{
+      const data=JSON.parse(r.result);
+      if(data.format!=='home-gym-backup' || !data.storage || typeof data.storage!=='object') throw new Error('format');
+      Object.entries(data.storage).forEach(([k,v])=>localStorage.setItem(k,String(v)));
+      const el=document.getElementById('backupStatus');
+      if(el) el.textContent='Backup importiert. App wird neu geladen …';
+      setTimeout(()=>location.reload(),500);
+    }catch(e){
+      const el=document.getElementById('backupStatus');
+      if(el) el.textContent='Diese Datei ist kein gültiges Home-Gym-Backup.';
+    }
+  };
+  r.readAsText(file);
+}
+
+</script>
+<script type="application/json" id="homeGymUpdatePolicy">
+{"schemaVersion":1,"policy":"preserve-existing-storage-keys","removedExercises":"keep-history","renamedExercises":"retain-key-when-migrated","newExercises":"start-empty"}
+</script>
+
+</body></html>
